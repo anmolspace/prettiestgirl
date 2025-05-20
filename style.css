@@ -1,11 +1,11 @@
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: 'Georgia', serif; /* A slightly more romantic font */
+    background-color: #fdf6f6; /* A very light pink/off-white */
+    color: #443131; /* Dark brown text for warmth */
     margin: 0;
-    padding: 0;
+    padding: 20px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     min-height: 100vh;
     text-align: center;
@@ -14,111 +14,84 @@ body {
 .container {
     background-color: #fff;
     padding: 30px 40px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    max-width: 700px;
     width: 90%;
+    border: 1px solid #f0e0e0;
 }
 
 header h1 {
-    color: #2c3e50;
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    color: #d16085; /* A soft magenta/rose color */
+    font-size: 2.2em;
+    margin-bottom: 25px;
+    font-family: 'Dancing Script', cursive; /* A more decorative font for the main heading - add Google Font if you want */
+    /* If you want to use Google Fonts like 'Dancing Script', add this to your <head> in index.html:
+       <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    */
 }
 
-.coming-soon-text {
-    font-size: 3.5em;
-    color: #3498db;
-    margin: 0 0 20px 0;
-    font-weight: bold;
-    animation: pulse 1.5s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-    100% {
-        transform: scale(1);
-    }
-}
-
-.description {
-    font-size: 1.2em;
+.photo-section {
     margin-bottom: 30px;
-    color: #555;
 }
 
-.countdown {
-    font-size: 1.5em;
-    margin-bottom: 30px;
-    color: #e74c3c;
-    font-weight: bold;
+.main-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    border: 5px solid #fff;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
 }
 
-.countdown span {
-    display: inline-block;
-    margin: 0 10px;
-    padding: 10px;
-    background-color: #ecf0f1;
-    border-radius: 5px;
+.main-photo:hover {
+    transform: scale(1.03);
 }
 
-.newsletter {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
-}
-
-.newsletter h2 {
+.message-section h2 {
+    color: #c05075;
     font-size: 1.8em;
-    color: #333;
     margin-bottom: 15px;
 }
 
-.newsletter input[type="email"] {
-    padding: 12px;
-    width: calc(100% - 110px);
-    border: 1px solid #ddd;
-    border-radius: 5px 0 0 5px;
-    font-size: 1em;
-    box-sizing: border-box; /* Ensures padding doesn't add to width */
+.message-section p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    color: #5c4747;
+    margin-bottom: 15px;
 }
-
-.newsletter button {
-    padding: 12px 20px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 0 5px 5px 0;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-.newsletter button:hover {
-    background-color: #2980b9;
-}
-
-.form-message {
-    margin-top: 10px;
-    font-size: 0.9em;
-}
-
-.form-message.success {
-    color: #2ecc71;
-}
-
-.form-message.error {
-    color: #e74c3c;
-}
-
 
 footer {
-    margin-top: 30px;
+    margin-top: 40px;
     font-size: 0.9em;
-    color: #777;
+    color: #7c6a6a;
+}
+
+footer p {
+    margin-bottom: 5px;
+}
+
+.domain-link {
+    color: #d16085;
+    text-decoration: none;
+}
+
+.domain-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+    .message-section h2 {
+        font-size: 1.5em;
+    }
+    .message-section p {
+        font-size: 1em;
+    }
+    .container {
+        padding: 20px;
+    }
 }
